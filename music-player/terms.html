@@ -24,78 +24,716 @@
     h2 { font-size: 1.05rem; margin: 1.75rem 0 0.6rem; padding-top: 0.5rem; border-top: 1px solid var(--border); }
     p, li { color: var(--fg); }
     .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
-    .lang { font-size: 0.9rem; margin-bottom: 1.25rem; }
-    .lang a { margin-right: 0.75rem; }
     .note { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 0.9rem; font-size: 0.88rem; color: var(--muted); }
     a { color: var(--accent); }
     ul { padding-left: 1.15rem; margin: 0.4rem 0; }
     li { margin: 0.25rem 0; }
+    .langbar { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--muted); }
+    .langbar select { font: inherit; color: var(--fg); background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 0.3rem 0.5rem; }
+    [dir="rtl"] ul { padding-left: 0; padding-right: 1.15rem; }
   </style>
 </head>
 <body>
   <main>
-    <p class="lang">Language: <strong>English</strong> | <a href="terms.zh.html">中文</a></p>
+    <div class="langbar">
+      <label for="lang-select">Language / 语言</label>
+      <select id="lang-select">
+        <option value="en">English</option>
+        <option value="zh">简体中文</option>
+        <option value="zh-TW">繁體中文</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="de">Deutsch</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="pt">Português</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
 
-    <h1>Terms of Service</h1>
-    <p class="meta">
-      Local Music Player
-    </p>
+    <section data-lang="en" lang="en">
+      <h1>Terms of Service</h1>
+      <p class="meta">Local Music Player · Effective August 3, 2026</p>
 
-    <p>
-      These Terms of Service (“Terms”) govern your use of Local Music Player (“the App”).
-      By installing or using the App, you agree to these Terms. If you do not agree, do not use the App.
-    </p>
+      <p>
+        These Terms of Service (“Terms”) govern your use of Local Music Player (“the App”).
+        By installing or using the App, you agree to these Terms. If you do not agree, do not use the App.
+      </p>
 
-    <h2>The App</h2>
-    <p>
-      The App is an offline, local music player. It reads and plays audio files stored on your
-      device and does not require an account to use its free features.
-    </p>
+      <h2>The App</h2>
+      <p>
+        The App is an offline, local music player. It reads and plays audio files stored on your
+        device and does not require an account to use its free features.
+      </p>
 
-    <h2>Purchases</h2>
-    <p>
-      The App may offer optional paid features via subscription or a one-time (“lifetime”) unlock,
-      billed through Google Play Billing or the Apple App Store. Purchases are subject to the
-      billing platform's own terms and refund policies. A one-time unlock applies to the paid
-      features available at the time of purchase; it does not automatically include unrelated
-      major new features added in future versions, unless stated otherwise at the time of release.
-    </p>
-    <p>
-      Subscription price changes will not affect an already-active billing cycle and will follow
-      the notice requirements of the billing platform for future renewals. You can manage or cancel
-      a subscription, and request a refund, through your Google Play or App Store account settings.
-    </p>
+      <h2>Purchases</h2>
+      <p>
+        The App may offer optional paid features via subscription or a one-time (“lifetime”) unlock,
+        billed through Google Play Billing or the Apple App Store. Purchases are subject to the
+        billing platform's own terms and refund policies. A one-time unlock grants all VIP features,
+        including VIP features added in later versions, at no additional cost.
+      </p>
+      <p>
+        Subscriptions renew automatically. Unless auto-renewal is turned off at least 24 hours before
+        the end of the current period, the subscription renews and your store account is charged for
+        the renewal within 24 hours before the end of the current period; payment is charged to that
+        account at confirmation of purchase. Price changes will not affect an already-active billing
+        cycle and will follow the notice requirements of the billing platform for future renewals.
+        You can manage a subscription, turn off auto-renewal, or request a refund through your
+        Google Play or App Store account settings.
+      </p>
 
-    <h2>Acceptable Use</h2>
-    <p>
-      You are responsible for the legality of the audio files you import and play in the App.
-      Do not use the App to infringe anyone's copyright or other rights.
-    </p>
+      <h2>Acceptable Use</h2>
+      <p>
+        You are responsible for the legality of the audio files you import and play in the App.
+        Do not use the App to infringe anyone's copyright or other rights.
+      </p>
 
-    <h2>No Warranty</h2>
-    <p>
-      The App is provided “as is”, without warranties of any kind, to the extent permitted by law.
-      We do not guarantee the App will be error-free or uninterrupted.
-    </p>
+      <h2>No Warranty</h2>
+      <p>
+        The App is provided “as is”, without warranties of any kind, to the extent permitted by law.
+        We do not guarantee the App will be error-free or uninterrupted.
+      </p>
 
-    <h2>Limitation of Liability</h2>
-    <p>
-      To the extent permitted by law, we are not liable for indirect, incidental, or consequential
-      damages arising from your use of the App, including loss of data such as your local library,
-      playlists, or settings.
-    </p>
+      <h2>Limitation of Liability</h2>
+      <p>
+        To the extent permitted by law, we are not liable for indirect, incidental, or consequential
+        damages arising from your use of the App, including loss of data such as your local library,
+        playlists, or settings.
+      </p>
 
-    <h2>Changes to the App or Terms</h2>
-    <p>
-      We may update the App and these Terms from time to time. Continued use after an update means
-      you accept the revised Terms. Material changes affecting active subscribers will follow the
-      applicable billing platform's notice requirements.
-    </p>
+      <h2>Changes to the App or Terms</h2>
+      <p>
+        We may update the App and these Terms from time to time. Continued use after an update means
+        you accept the revised Terms. Material changes affecting active subscribers will follow the
+        applicable billing platform's notice requirements.
+      </p>
 
-    <h2>Contact</h2>
-    <p>
-      Email: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a>
-    </p>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="zh" lang="zh-Hans" hidden>
+      <h1>用户协议</h1>
+      <p class="meta">本地音乐播放器 · 生效日期：2026 年 8 月 3 日</p>
+
+      <p class="note">如中英文内容存在差异，以英文版为准。</p>
+
+      <p>
+        本用户协议（以下简称“本协议”）适用于您对本地音乐播放器（以下简称“本应用”）的使用。
+        安装或使用本应用即表示您同意本协议；如不同意，请不要使用本应用。
+      </p>
+
+      <h2>关于本应用</h2>
+      <p>
+        本应用是一款离线本地音乐播放器，用于读取并播放您设备上存储的音频文件。
+        使用本应用的免费功能无需注册账号。
+      </p>
+
+      <h2>付费购买</h2>
+      <p>
+        本应用可能提供订阅或一次性（“买断”）解锁的付费功能，费用通过 Google Play / App Store 结算，
+        并遵循其各自的条款与退款政策。一次性买断解锁全部 VIP 权益，
+        并包含此后版本中新增的 VIP 权益，无需再次付费。
+      </p>
+      <p>
+        订阅为自动续订。除非在当前订阅期结束前至少 24 小时关闭自动续订，订阅将自动续期，
+        续订费用会在当前订阅期结束前 24 小时内从您的商店账号扣除；购买确认时即从该账号扣款。
+        订阅价格调整不会影响已生效的计费周期，后续续订如涉及调价将遵循相应商店平台的通知规则。
+        您可以在 Google Play 或 App Store 的账号设置中管理订阅、关闭自动续订或申请退款。
+      </p>
+
+      <h2>合规使用</h2>
+      <p>
+        您需自行确保导入并播放的音频文件来源合法，不得使用本应用侵犯他人版权或其他权利。
+      </p>
+
+      <h2>免责声明</h2>
+      <p>
+        在法律允许的范围内，本应用按“现状”提供，不作任何明示或暗示的担保，
+        我们不保证应用完全无错误或不中断运行。
+      </p>
+
+      <h2>责任限制</h2>
+      <p>
+        在法律允许的范围内，因使用本应用而产生的间接、附带或衍生性损失（包括本地音乐库、歌单或设置数据丢失），
+        我们不承担相应责任。
+      </p>
+
+      <h2>协议与应用的变更</h2>
+      <p>
+        我们可能会不定期更新本应用及本协议，更新后继续使用即视为您接受修订后的协议。
+        涉及已订阅用户的重大变更将遵循相应商店平台的通知要求。
+      </p>
+
+      <h2>联系方式</h2>
+      <p>邮箱：<a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="zh-TW" lang="zh-Hant" hidden>
+      <h1>使用者條款</h1>
+      <p class="meta">本機音樂播放器 · 生效日期：2026 年 8 月 3 日</p>
+
+      <p class="note">如中英文內容有所差異，以英文版為準。</p>
+
+      <p>
+        本使用者條款（以下簡稱「本條款」）適用於您對本機音樂播放器（以下簡稱「本應用程式」）的使用。
+        安裝或使用本應用程式即表示您同意本條款；如不同意，請勿使用本應用程式。
+      </p>
+
+      <h2>關於本應用程式</h2>
+      <p>
+        本應用程式是一款離線本機音樂播放器，用於讀取並播放您裝置上儲存的音訊檔案。
+        使用本應用程式的免費功能無需註冊帳號。
+      </p>
+
+      <h2>付費購買</h2>
+      <p>
+        本應用程式可能提供訂閱或一次性（「買斷」）解鎖的付費功能，費用透過 Google Play / App Store 結帳，
+        並遵循其各自的條款與退款政策。一次性買斷解鎖全部 VIP 權益，
+        並包含此後版本中新增的 VIP 權益，無需再次付費。
+      </p>
+      <p>
+        訂閱為自動續訂。除非在目前訂閱期結束前至少 24 小時關閉自動續訂，訂閱將自動續期，
+        續訂費用會在目前訂閱期結束前 24 小時內從您的商店帳號扣款；購買確認時即從該帳號扣款。
+        訂閱價格調整不會影響已生效的計費週期，後續續訂如涉及調價將遵循相應商店平台的通知規則。
+        您可以在 Google Play 或 App Store 的帳號設定中管理訂閱、關閉自動續訂或申請退款。
+      </p>
+
+      <h2>合規使用</h2>
+      <p>
+        您須自行確保匯入並播放的音訊檔案來源合法，不得使用本應用程式侵害他人著作權或其他權利。
+      </p>
+
+      <h2>免責聲明</h2>
+      <p>
+        在法律允許的範圍內，本應用程式按「現狀」提供，不作任何明示或默示的擔保，
+        我們不保證本應用程式完全無錯誤或不中斷運行。
+      </p>
+
+      <h2>責任限制</h2>
+      <p>
+        在法律允許的範圍內，因使用本應用程式而產生的間接、附隨或衍生性損失（包括本機音樂庫、播放清單或設定資料遺失），
+        我們不承擔相應責任。
+      </p>
+
+      <h2>條款與應用程式的變更</h2>
+      <p>
+        我們可能不定期更新本應用程式及本條款，更新後繼續使用即視為您接受修訂後的條款。
+        涉及已訂閱使用者的重大變更將遵循相應商店平台的通知要求。
+      </p>
+
+      <h2>聯絡方式</h2>
+      <p>電子郵件：<a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="ja" lang="ja" hidden>
+      <h1>利用規約</h1>
+      <p class="meta">ローカル音楽プレーヤー · 施行日：2026 年 8 月 3 日</p>
+
+      <p class="note">日本語版と英語版の内容に相違がある場合は、英語版が優先されます。</p>
+
+      <p>
+        本利用規約（以下「本規約」）は、ローカル音楽プレーヤー（以下「本アプリ」）のご利用に適用されます。
+        本アプリをインストールまたは使用することにより、本規約に同意したものとみなします。
+        同意されない場合は、本アプリをご利用にならないでください。
+      </p>
+
+      <h2>本アプリについて</h2>
+      <p>
+        本アプリはオフラインで動作するローカル音楽プレーヤーで、お客様の端末に保存された音声ファイルを
+        読み込んで再生します。無料の機能を利用するにあたってアカウント登録は不要です。
+      </p>
+
+      <h2>課金について</h2>
+      <p>
+        本アプリは、サブスクリプションまたは買い切り（「ライフタイム」）による有料機能を提供する場合があります。
+        決済は Google Play ビリングまたは Apple App Store を通じて行われ、各プラットフォームの規約および
+        返金ポリシーが適用されます。買い切りではすべての VIP 機能が解除され、
+        今後のバージョンで追加される VIP 機能も追加料金なしでご利用いただけます。
+      </p>
+      <p>
+        サブスクリプションは自動更新です。現在の期間の終了までに少なくとも 24 時間前までに自動更新を
+        オフにしない限り、サブスクリプションは更新され、更新料は現在の期間終了前 24 時間以内に
+        お客様のストアアカウントへ請求されます。購入確定時に同アカウントから支払いが行われます。
+        価格の変更は既に開始している請求期間には影響せず、以後の更新については各プラットフォームの
+        通知要件に従います。サブスクリプションの管理、自動更新の解除、返金の申請は、
+        Google Play または App Store のアカウント設定から行えます。
+      </p>
+
+      <h2>適切な利用</h2>
+      <p>
+        本アプリに取り込み再生する音声ファイルの適法性については、お客様の責任となります。
+        他者の著作権その他の権利を侵害する目的で本アプリを使用しないでください。
+      </p>
+
+      <h2>免責事項</h2>
+      <p>
+        法律で認められる範囲において、本アプリは「現状のまま」提供され、いかなる保証も伴いません。
+        エラーがないこと、中断なく動作することを保証するものではありません。
+      </p>
+
+      <h2>責任の制限</h2>
+      <p>
+        法律で認められる範囲において、本アプリの利用に起因する間接的、付随的または結果的な損害
+        （端末内のライブラリ、プレイリスト、設定などのデータの消失を含む）について、当方は責任を負いません。
+      </p>
+
+      <h2>本アプリおよび本規約の変更</h2>
+      <p>
+        当方は本アプリおよび本規約を随時更新する場合があります。更新後も利用を継続された場合、
+        改訂後の本規約に同意したものとみなします。既存の定期購入者に影響する重大な変更については、
+        各決済プラットフォームの通知要件に従います。
+      </p>
+
+      <h2>お問い合わせ</h2>
+      <p>メール：<a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="ko" lang="ko" hidden>
+      <h1>이용약관</h1>
+      <p class="meta">로컬 음악 플레이어 · 시행일: 2026년 8월 3일</p>
+
+      <p class="note">한국어판과 영문판의 내용이 다를 경우 영문판이 우선합니다.</p>
+
+      <p>
+        본 이용약관(이하 “본 약관”)은 로컬 음악 플레이어(이하 “본 앱”)의 이용에 적용됩니다.
+        본 앱을 설치하거나 사용하면 본 약관에 동의한 것으로 봅니다. 동의하지 않으시면 본 앱을 사용하지 마십시오.
+      </p>
+
+      <h2>본 앱에 대하여</h2>
+      <p>
+        본 앱은 오프라인으로 동작하는 로컬 음악 플레이어로, 사용자의 기기에 저장된 오디오 파일을
+        읽고 재생합니다. 무료 기능을 이용하는 데에는 계정 가입이 필요하지 않습니다.
+      </p>
+
+      <h2>결제</h2>
+      <p>
+        본 앱은 구독 또는 일회성(“평생”) 해제 방식의 유료 기능을 제공할 수 있으며, 결제는
+        Google Play 결제 또는 Apple App Store를 통해 이루어지고 각 플랫폼의 약관 및 환불 정책이
+        적용됩니다. 일회성 해제 시 모든 VIP 기능이 해제되며, 이후 버전에서 추가되는 VIP 기능도
+        추가 비용 없이 이용할 수 있습니다.
+      </p>
+      <p>
+        구독은 자동으로 갱신됩니다. 현재 기간이 끝나기 최소 24시간 전에 자동 갱신을 해제하지 않으면
+        구독이 갱신되며, 갱신 요금은 현재 기간 종료 전 24시간 이내에 사용자의 스토어 계정으로 청구됩니다.
+        구매가 확정되는 시점에 해당 계정에서 결제가 이루어집니다. 가격 변경은 이미 시작된 청구 주기에는
+        영향을 주지 않으며, 이후 갱신에 대해서는 해당 플랫폼의 고지 요건을 따릅니다. 구독 관리, 자동 갱신
+        해제, 환불 요청은 Google Play 또는 App Store의 계정 설정에서 할 수 있습니다.
+      </p>
+
+      <h2>적절한 이용</h2>
+      <p>
+        본 앱에 가져와 재생하는 오디오 파일의 적법성은 사용자의 책임입니다.
+        타인의 저작권이나 기타 권리를 침해하는 목적으로 본 앱을 사용하지 마십시오.
+      </p>
+
+      <h2>보증의 부인</h2>
+      <p>
+        법이 허용하는 범위에서 본 앱은 “있는 그대로” 제공되며 어떠한 보증도 하지 않습니다.
+        오류가 없거나 중단 없이 작동함을 보장하지 않습니다.
+      </p>
+
+      <h2>책임의 제한</h2>
+      <p>
+        법이 허용하는 범위에서, 본 앱의 이용으로 발생한 간접적·부수적 또는 결과적 손해
+        (기기 내 라이브러리, 재생목록, 설정 등 데이터의 손실을 포함)에 대하여 당사는 책임을 지지 않습니다.
+      </p>
+
+      <h2>앱 및 약관의 변경</h2>
+      <p>
+        당사는 본 앱과 본 약관을 수시로 변경할 수 있습니다. 변경 후에도 계속 사용하시면 개정된 약관에
+        동의한 것으로 봅니다. 기존 구독자에게 영향을 미치는 중요한 변경은 해당 결제 플랫폼의 고지 요건을 따릅니다.
+      </p>
+
+      <h2>문의</h2>
+      <p>이메일: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="de" lang="de" hidden>
+      <h1>Nutzungsbedingungen</h1>
+      <p class="meta">Lokaler Musikplayer · Gültig ab 3. August 2026</p>
+
+      <p class="note">Bei Abweichungen zwischen der deutschen und der englischen Fassung ist die englische Fassung maßgeblich.</p>
+
+      <p>
+        Diese Nutzungsbedingungen („Bedingungen“) gelten für Ihre Nutzung von Lokaler Musikplayer
+        („die App“). Mit der Installation oder Nutzung der App erklären Sie sich mit diesen
+        Bedingungen einverstanden. Wenn Sie nicht einverstanden sind, nutzen Sie die App nicht.
+      </p>
+
+      <h2>Die App</h2>
+      <p>
+        Die App ist ein offline arbeitender lokaler Musikplayer. Sie liest und spielt Audiodateien
+        ab, die auf Ihrem Gerät gespeichert sind; für die kostenlosen Funktionen ist kein Konto erforderlich.
+      </p>
+
+      <h2>Käufe</h2>
+      <p>
+        Die App kann optionale kostenpflichtige Funktionen per Abonnement oder als einmalige
+        („lebenslange“) Freischaltung anbieten, abgerechnet über Google Play Billing oder den
+        Apple App Store. Für Käufe gelten die Bedingungen und Rückerstattungsregeln der jeweiligen
+        Abrechnungsplattform. Eine einmalige Freischaltung gewährt alle VIP-Funktionen, einschließlich
+        der in späteren Versionen ergänzten VIP-Funktionen, ohne weitere Kosten.
+      </p>
+      <p>
+        Abonnements verlängern sich automatisch. Sofern die automatische Verlängerung nicht mindestens
+        24 Stunden vor Ende des laufenden Zeitraums deaktiviert wird, verlängert sich das Abonnement,
+        und Ihr Store-Konto wird innerhalb von 24 Stunden vor Ende des laufenden Zeitraums für die
+        Verlängerung belastet; die Zahlung erfolgt bei Bestätigung des Kaufs über dieses Konto.
+        Preisänderungen wirken sich nicht auf einen bereits laufenden Abrechnungszeitraum aus und
+        folgen für künftige Verlängerungen den Mitteilungspflichten der Abrechnungsplattform.
+        Sie können ein Abonnement in den Kontoeinstellungen von Google Play oder App Store verwalten,
+        die automatische Verlängerung deaktivieren oder eine Rückerstattung beantragen.
+      </p>
+
+      <h2>Zulässige Nutzung</h2>
+      <p>
+        Für die Rechtmäßigkeit der Audiodateien, die Sie in der App einlesen und abspielen, sind Sie
+        selbst verantwortlich. Nutzen Sie die App nicht, um Urheberrechte oder sonstige Rechte
+        Dritter zu verletzen.
+      </p>
+
+      <h2>Keine Gewährleistung</h2>
+      <p>
+        Die App wird im gesetzlich zulässigen Umfang „wie besehen“ und ohne Gewährleistung jeglicher
+        Art bereitgestellt. Wir garantieren nicht, dass die App fehlerfrei oder ohne Unterbrechung läuft.
+      </p>
+
+      <h2>Haftungsbeschränkung</h2>
+      <p>
+        Im gesetzlich zulässigen Umfang haften wir nicht für indirekte, zufällige oder Folgeschäden
+        aus Ihrer Nutzung der App, einschließlich des Verlusts von Daten wie Ihrer lokalen Mediathek,
+        Ihrer Playlists oder Ihrer Einstellungen.
+      </p>
+
+      <h2>Änderungen der App oder der Bedingungen</h2>
+      <p>
+        Wir können die App und diese Bedingungen von Zeit zu Zeit aktualisieren. Die weitere Nutzung
+        nach einer Aktualisierung gilt als Zustimmung zu den überarbeiteten Bedingungen. Wesentliche
+        Änderungen, die aktive Abonnenten betreffen, folgen den Mitteilungspflichten der jeweiligen
+        Abrechnungsplattform.
+      </p>
+
+      <h2>Kontakt</h2>
+      <p>E-Mail: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="es" lang="es" hidden>
+      <h1>Términos del servicio</h1>
+      <p class="meta">Reproductor de música local · En vigor desde el 3 de agosto de 2026</p>
+
+      <p class="note">Si existe alguna discrepancia entre la versión en español y la versión en inglés, prevalecerá la versión en inglés.</p>
+
+      <p>
+        Estos Términos del servicio («Términos») rigen tu uso de Reproductor de música local («la App»).
+        Al instalar o usar la App, aceptas estos Términos. Si no los aceptas, no uses la App.
+      </p>
+
+      <h2>La App</h2>
+      <p>
+        La App es un reproductor de música local que funciona sin conexión. Lee y reproduce los
+        archivos de audio guardados en tu dispositivo y no requiere ninguna cuenta para usar sus
+        funciones gratuitas.
+      </p>
+
+      <h2>Compras</h2>
+      <p>
+        La App puede ofrecer funciones de pago opcionales mediante suscripción o mediante un
+        desbloqueo de pago único («de por vida»), facturados a través de Google Play Billing o de
+        Apple App Store. Las compras están sujetas a los términos y las políticas de reembolso de la
+        plataforma de facturación correspondiente. El desbloqueo de pago único otorga todas las
+        funciones VIP, incluidas las que se añadan en versiones posteriores, sin coste adicional.
+      </p>
+      <p>
+        Las suscripciones se renuevan automáticamente. Salvo que la renovación automática se desactive
+        al menos 24 horas antes del final del periodo en curso, la suscripción se renueva y se cobra
+        a tu cuenta de la tienda dentro de las 24 horas previas al final del periodo en curso; el
+        cargo se realiza en esa cuenta al confirmar la compra. Los cambios de precio no afectarán a
+        un ciclo de facturación ya en curso y, para las renovaciones futuras, seguirán los requisitos
+        de notificación de la plataforma de facturación. Puedes gestionar una suscripción, desactivar
+        la renovación automática o solicitar un reembolso desde los ajustes de tu cuenta de Google
+        Play o de App Store.
+      </p>
+
+      <h2>Uso aceptable</h2>
+      <p>
+        Eres responsable de la legalidad de los archivos de audio que importas y reproduces en la App.
+        No uses la App para vulnerar los derechos de autor ni otros derechos de terceros.
+      </p>
+
+      <h2>Ausencia de garantía</h2>
+      <p>
+        En la medida en que lo permita la ley, la App se ofrece «tal cual», sin garantías de ningún
+        tipo. No garantizamos que la App esté libre de errores ni que funcione sin interrupciones.
+      </p>
+
+      <h2>Limitación de responsabilidad</h2>
+      <p>
+        En la medida en que lo permita la ley, no somos responsables de los daños indirectos,
+        incidentales o consecuentes derivados de tu uso de la App, incluida la pérdida de datos como
+        tu biblioteca local, tus listas de reproducción o tus ajustes.
+      </p>
+
+      <h2>Cambios en la App o en los Términos</h2>
+      <p>
+        Podemos actualizar la App y estos Términos ocasionalmente. Seguir usándola tras una
+        actualización implica que aceptas los Términos revisados. Los cambios sustanciales que afecten
+        a suscriptores activos seguirán los requisitos de notificación de la plataforma de facturación aplicable.
+      </p>
+
+      <h2>Contacto</h2>
+      <p>Correo electrónico: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="fr" lang="fr" hidden>
+      <h1>Conditions d'utilisation</h1>
+      <p class="meta">Lecteur de musique locale · En vigueur depuis le 3 août 2026</p>
+
+      <p class="note">En cas de divergence entre la version française et la version anglaise, la version anglaise prévaut.</p>
+
+      <p>
+        Les présentes Conditions d'utilisation (« Conditions ») régissent votre utilisation de
+        Lecteur de musique locale (« l'Application »). En installant ou en utilisant l'Application,
+        vous acceptez ces Conditions. Si vous ne les acceptez pas, n'utilisez pas l'Application.
+      </p>
+
+      <h2>L'Application</h2>
+      <p>
+        L'Application est un lecteur de musique locale fonctionnant hors ligne. Elle lit et joue les
+        fichiers audio stockés sur votre appareil et ne nécessite aucun compte pour ses fonctions gratuites.
+      </p>
+
+      <h2>Achats</h2>
+      <p>
+        L'Application peut proposer des fonctions payantes facultatives, par abonnement ou par
+        déverrouillage à paiement unique (« à vie »), facturés via Google Play Billing ou l'Apple
+        App Store. Les achats sont soumis aux conditions et aux politiques de remboursement de la
+        plateforme de facturation concernée. Le déverrouillage à paiement unique donne accès à
+        toutes les fonctions VIP, y compris celles ajoutées dans les versions ultérieures, sans frais supplémentaires.
+      </p>
+      <p>
+        Les abonnements se renouvellent automatiquement. À moins que le renouvellement automatique ne
+        soit désactivé au moins 24 heures avant la fin de la période en cours, l'abonnement est
+        renouvelé et votre compte de la boutique est débité du montant du renouvellement dans les
+        24 heures précédant la fin de la période en cours ; le paiement est prélevé sur ce compte à
+        la confirmation de l'achat. Les changements de prix n'affectent pas un cycle de facturation
+        déjà en cours et suivent, pour les renouvellements futurs, les obligations d'information de
+        la plateforme de facturation. Vous pouvez gérer un abonnement, désactiver le renouvellement
+        automatique ou demander un remboursement dans les réglages de votre compte Google Play ou App Store.
+      </p>
+
+      <h2>Utilisation acceptable</h2>
+      <p>
+        Vous êtes responsable de la licéité des fichiers audio que vous importez et lisez dans
+        l'Application. N'utilisez pas l'Application pour porter atteinte au droit d'auteur ou à
+        d'autres droits de tiers.
+      </p>
+
+      <h2>Absence de garantie</h2>
+      <p>
+        Dans la mesure permise par la loi, l'Application est fournie « en l'état », sans garantie
+        d'aucune sorte. Nous ne garantissons pas qu'elle sera exempte d'erreurs ni qu'elle
+        fonctionnera sans interruption.
+      </p>
+
+      <h2>Limitation de responsabilité</h2>
+      <p>
+        Dans la mesure permise par la loi, nous ne saurions être tenus responsables des dommages
+        indirects, accessoires ou consécutifs résultant de votre utilisation de l'Application,
+        y compris la perte de données telles que votre bibliothèque locale, vos playlists ou vos réglages.
+      </p>
+
+      <h2>Modifications de l'Application ou des Conditions</h2>
+      <p>
+        Nous pouvons mettre à jour l'Application et les présentes Conditions de temps à autre.
+        Poursuivre l'utilisation après une mise à jour vaut acceptation des Conditions révisées.
+        Les modifications substantielles concernant les abonnés actifs suivront les obligations
+        d'information de la plateforme de facturation applicable.
+      </p>
+
+      <h2>Contact</h2>
+      <p>E-mail : <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="pt" lang="pt" hidden>
+      <h1>Termos de Uso</h1>
+      <p class="meta">Reprodutor de música local · Em vigor desde 3 de agosto de 2026</p>
+
+      <p class="note">Em caso de divergência entre a versão em português e a versão em inglês, prevalece a versão em inglês.</p>
+
+      <p>
+        Estes Termos de Uso (“Termos”) regem o seu uso do Reprodutor de música local (“o App”).
+        Ao instalar ou usar o App, você concorda com estes Termos. Se não concordar, não use o App.
+      </p>
+
+      <h2>O App</h2>
+      <p>
+        O App é um reprodutor de música local que funciona offline. Ele lê e reproduz os arquivos de
+        áudio armazenados no seu dispositivo e não exige conta para usar seus recursos gratuitos.
+      </p>
+
+      <h2>Compras</h2>
+      <p>
+        O App pode oferecer recursos pagos opcionais por assinatura ou por desbloqueio de pagamento
+        único (“vitalício”), cobrados pelo Google Play Billing ou pela Apple App Store. As compras
+        estão sujeitas aos termos e às políticas de reembolso da respectiva plataforma de cobrança.
+        O desbloqueio de pagamento único concede todos os recursos VIP, incluindo os adicionados em
+        versões posteriores, sem custo adicional.
+      </p>
+      <p>
+        As assinaturas são renovadas automaticamente. A menos que a renovação automática seja
+        desativada com pelo menos 24 horas de antecedência do fim do período atual, a assinatura é
+        renovada e a cobrança da renovação é feita na sua conta da loja nas 24 horas anteriores ao
+        fim do período atual; o pagamento é debitado dessa conta na confirmação da compra. Mudanças
+        de preço não afetam um ciclo de cobrança já em vigor e, para renovações futuras, seguirão os
+        requisitos de aviso da plataforma de cobrança. Você pode gerenciar uma assinatura, desativar
+        a renovação automática ou solicitar reembolso nas configurações da sua conta do Google Play
+        ou da App Store.
+      </p>
+
+      <h2>Uso aceitável</h2>
+      <p>
+        Você é responsável pela legalidade dos arquivos de áudio que importa e reproduz no App.
+        Não use o App para violar direitos autorais ou outros direitos de terceiros.
+      </p>
+
+      <h2>Ausência de garantia</h2>
+      <p>
+        Na medida permitida pela lei, o App é fornecido “no estado em que se encontra”, sem garantias
+        de qualquer natureza. Não garantimos que o App esteja livre de erros nem que funcione sem interrupções.
+      </p>
+
+      <h2>Limitação de responsabilidade</h2>
+      <p>
+        Na medida permitida pela lei, não nos responsabilizamos por danos indiretos, incidentais ou
+        consequentes decorrentes do uso do App, incluindo a perda de dados como sua biblioteca local,
+        suas playlists ou suas configurações.
+      </p>
+
+      <h2>Alterações no App ou nos Termos</h2>
+      <p>
+        Podemos atualizar o App e estes Termos periodicamente. Continuar a usar o App após uma
+        atualização significa que você aceita os Termos revisados. Alterações relevantes que afetem
+        assinantes ativos seguirão os requisitos de aviso da plataforma de cobrança aplicável.
+      </p>
+
+      <h2>Contato</h2>
+      <p>E-mail: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="ar" lang="ar" dir="rtl" hidden>
+      <h1>شروط الخدمة</h1>
+      <p class="meta">مشغل الموسيقى المحلية · ساري من 3 أغسطس 2026</p>
+
+      <p class="note">في حال وجود اختلاف بين النسخة العربية والنسخة الإنجليزية، تكون النسخة الإنجليزية هي المرجع.</p>
+
+      <p>
+        تنظّم شروط الخدمة هذه (»الشروط«) استخدامك لتطبيق مشغل الموسيقى المحلية (»التطبيق«).
+        بتثبيت التطبيق أو استخدامه فإنك توافق على هذه الشروط. وإذا لم توافق عليها، فلا تستخدم التطبيق.
+      </p>
+
+      <h2>عن التطبيق</h2>
+      <p>
+        التطبيق مشغل موسيقى محلي يعمل دون اتصال بالإنترنت، ويقرأ ملفات الصوت المخزَّنة على جهازك ويشغّلها.
+        ولا يتطلب استخدام ميزاته المجانية إنشاء حساب.
+      </p>
+
+      <h2>المدفوعات</h2>
+      <p>
+        قد يوفّر التطبيق ميزات مدفوعة اختيارية عبر الاشتراك أو عبر فتح لمرة واحدة (»مدى الحياة«)،
+        وتُحصَّل عبر Google Play Billing أو Apple App Store. وتخضع عمليات الشراء لشروط منصة الدفع
+        وسياسات الاسترداد الخاصة بها. ويمنح الفتح لمرة واحدة جميع ميزات VIP، بما في ذلك ما يُضاف
+        منها في الإصدارات اللاحقة، دون تكلفة إضافية.
+      </p>
+      <p>
+        تُجدَّد الاشتراكات تلقائيًا. وما لم يتم إيقاف التجديد التلقائي قبل 24 ساعة على الأقل من نهاية
+        الفترة الحالية، فسيُجدَّد الاشتراك وسيُخصم مقابل التجديد من حسابك في المتجر خلال 24 ساعة
+        السابقة لنهاية الفترة الحالية؛ ويُخصم المبلغ من ذلك الحساب عند تأكيد الشراء. ولا تؤثر
+        تغييرات الأسعار في دورة فوترة جارية بالفعل، وستتبع بالنسبة للتجديدات المستقبلية متطلبات
+        الإشعار الخاصة بمنصة الدفع. ويمكنك إدارة الاشتراك أو إيقاف التجديد التلقائي أو طلب استرداد
+        المبلغ من إعدادات حسابك في Google Play أو App Store.
+      </p>
+
+      <h2>الاستخدام المقبول</h2>
+      <p>
+        أنت مسؤول عن مشروعية ملفات الصوت التي تستوردها وتشغّلها في التطبيق.
+        ولا تستخدم التطبيق للتعدي على حقوق المؤلف أو أي حقوق أخرى تخص الآخرين.
+      </p>
+
+      <h2>إخلاء المسؤولية عن الضمانات</h2>
+      <p>
+        يُقدَّم التطبيق »كما هو« دون أي ضمانات من أي نوع، بالقدر الذي يسمح به القانون.
+        ولا نضمن أن يكون التطبيق خاليًا من الأخطاء أو أن يعمل دون انقطاع.
+      </p>
+
+      <h2>حدود المسؤولية</h2>
+      <p>
+        بالقدر الذي يسمح به القانون، لا نتحمل المسؤولية عن الأضرار غير المباشرة أو العرضية أو التبعية
+        الناشئة عن استخدامك للتطبيق، بما في ذلك فقدان بيانات مثل مكتبتك المحلية أو قوائم التشغيل أو الإعدادات.
+      </p>
+
+      <h2>تغييرات التطبيق أو الشروط</h2>
+      <p>
+        قد نُحدِّث التطبيق وهذه الشروط من حين إلى آخر. ويُعدّ استمرارك في الاستخدام بعد التحديث
+        موافقةً على الشروط المعدَّلة. أما التغييرات الجوهرية التي تمس المشتركين النشطين فستتبع
+        متطلبات الإشعار الخاصة بمنصة الدفع المعنية.
+      </p>
+
+      <h2>التواصل</h2>
+      <p>البريد الإلكتروني: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
   </main>
+
+  <script>
+    (function () {
+      var sections = document.querySelectorAll('section[data-lang]');
+      var select = document.getElementById('lang-select');
+      var byCode = {};
+      for (var i = 0; i < sections.length; i++) {
+        byCode[sections[i].getAttribute('data-lang')] = sections[i];
+      }
+
+      function apply(code) {
+        if (!byCode[code]) return false;
+        for (var key in byCode) {
+          byCode[key].hidden = key !== code;
+        }
+        var root = document.documentElement;
+        root.setAttribute('lang', byCode[code].getAttribute('lang'));
+        root.setAttribute('dir', code === 'ar' ? 'rtl' : 'ltr');
+        select.value = code;
+        return true;
+      }
+
+      function resolve(tag) {
+        if (!tag) return null;
+        var lower = String(tag).replace(/_/g, '-').toLowerCase();
+        if (lower.indexOf('zh') === 0) {
+          return /hant|-tw|-hk|-mo/.test(lower) ? 'zh-TW' : 'zh';
+        }
+        var base = lower.split('-')[0];
+        return byCode[base] ? base : null;
+      }
+
+      var matched = /[?&]lang=([^&#]+)/.exec(location.search);
+      var candidates = [];
+      if (matched) candidates.push(decodeURIComponent(matched[1]));
+      var navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+      for (var j = 0; j < navLangs.length; j++) candidates.push(navLangs[j]);
+
+      for (var k = 0; k < candidates.length; k++) {
+        var code = resolve(candidates[k]);
+        if (code && apply(code)) break;
+      }
+
+      select.addEventListener('change', function () {
+        apply(select.value);
+        if (window.history && history.replaceState) {
+          history.replaceState(null, '', location.pathname + '?lang=' + select.value);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -24,84 +24,723 @@
     h2 { font-size: 1.05rem; margin: 1.75rem 0 0.6rem; padding-top: 0.5rem; border-top: 1px solid var(--border); }
     p, li { color: var(--fg); }
     .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
-    .lang { font-size: 0.9rem; margin-bottom: 1.25rem; }
-    .lang a { margin-right: 0.75rem; }
     .note { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 0.9rem; font-size: 0.88rem; color: var(--muted); }
     a { color: var(--accent); }
     ul { padding-left: 1.15rem; margin: 0.4rem 0; }
     li { margin: 0.25rem 0; }
+    .langbar { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--muted); }
+    .langbar select { font: inherit; color: var(--fg); background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 0.3rem 0.5rem; }
+    [dir="rtl"] ul { padding-left: 0; padding-right: 1.15rem; }
   </style>
 </head>
 <body>
   <main>
-    <p class="lang">Language: <strong>English</strong> | <a href="privacy.zh.html">中文</a></p>
+    <div class="langbar">
+      <label for="lang-select">Language / 语言</label>
+      <select id="lang-select">
+        <option value="en">English</option>
+        <option value="zh">简体中文</option>
+        <option value="zh-TW">繁體中文</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="de">Deutsch</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="pt">Português</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
 
-    <h1>Privacy Policy</h1>
-    <p class="meta">
-      Local Music Player
-    </p>
+    <section data-lang="en" lang="en">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Local Music Player · Effective August 3, 2026</p>
 
-    <p>
-      Local Music Player (“the App”) is an <strong>offline, local music player</strong>.
-      There is no in-app account system, and we do not run a server that collects your music
-      library or personal profile.
-    </p>
+      <p>
+        Local Music Player (“the App”) is an <strong>offline, local music player</strong>.
+        There is no in-app account system, and we do not run a server that collects your music
+        library or personal profile.
+      </p>
 
-    <h2>Summary</h2>
-    <ul>
-      <li>No registration or login inside the App.</li>
-      <li>Your music, playlists, and settings stay on your device.</li>
-      <li>We do not sell your personal data.</li>
-      <li>Purchases (if any) are processed by Google Play / Apple App Store, not by us.</li>
-    </ul>
+      <h2>Summary</h2>
+      <ul>
+        <li>No registration or login inside the App.</li>
+        <li>Your music, playlists, and settings stay on your device.</li>
+        <li>We do not sell your personal data.</li>
+        <li>Purchases (if any) are processed by Google Play / Apple App Store, not by us.</li>
+      </ul>
 
-    <h2>What Stays on Your Device</h2>
-    <p>Depending on how you use the App, it may store locally: metadata of scanned music
-      (title, artist, album, file path), playlists, favorites, queue, playback position,
-      theme/preferences, optional custom cover images, and an optional local crash summary
-      shown to you. None of this is uploaded to servers we operate.</p>
+      <h2>What Stays on Your Device</h2>
+      <p>Depending on how you use the App, it may store locally: metadata of scanned music
+        (title, artist, album, file path), playlists, favorites, queue, playback position,
+        theme/preferences, and optional custom cover images. None of this is uploaded to
+        servers we operate.</p>
 
-    <h2>Permissions</h2>
-    <p>Requested only for their stated purpose, availability varies by OS version:</p>
-    <ul>
-      <li><strong>Media / storage</strong> — find and play the audio files you choose.</li>
-      <li><strong>Photos</strong> — only when you pick a custom cover image.</li>
-      <li><strong>Notifications / background playback</strong> — media controls and continued playback.</li>
-      <li><strong>Audio settings</strong> — playback effects where supported.</li>
-      <li><strong>Ignore battery optimizations</strong> (Android, optional) — fewer unexpected playback stops.</li>
-      <li><strong>Display over other apps</strong> (Android, optional) — desktop/overlay lyrics only.</li>
-      <li><strong>Bluetooth audio routing</strong> — device detection for car/Bluetooth audio, not contacts.</li>
-    </ul>
-    <p>You can deny or revoke any permission in system settings; related features will be limited.</p>
+      <h2>Permissions</h2>
+      <p>Requested only for their stated purpose, availability varies by OS version:</p>
+      <ul>
+        <li><strong>Media / storage</strong> — find and play the audio files you choose.</li>
+        <li><strong>Photos</strong> — only when you pick a custom cover image.</li>
+        <li><strong>Notifications / background playback</strong> — media controls and continued playback.</li>
+        <li><strong>Audio settings</strong> — playback effects where supported.</li>
+        <li><strong>Display over other apps</strong> (Android, optional) — floating lyrics only.</li>
+        <li><strong>Bluetooth audio routing</strong> — device detection for car/Bluetooth audio, not contacts.</li>
+      </ul>
+      <p>You can deny or revoke any permission in system settings; related features will be limited.</p>
 
-    <h2>Purchases</h2>
-    <p>Subscriptions or one-time unlocks are billed via Google Play / Apple App Store under
-      their own privacy policies. We only receive the entitlement status needed to unlock features —
-      never your full payment details.</p>
+      <h2>Purchases</h2>
+      <p>Subscriptions or one-time unlocks are billed via Google Play / Apple App Store under
+        their own privacy policies. We only receive the entitlement status needed to unlock features —
+        never your full payment details.</p>
 
-    <h2>Sharing</h2>
-    <p>We do not sell your personal information or share your local library with third parties
-      for marketing. Limited data may reach Google/Apple as needed for distribution, payments,
-      and OS services.</p>
+      <h2>Sharing</h2>
+      <p>We do not sell your personal information or share your local library with third parties
+        for marketing. Limited data may reach Google/Apple as needed for distribution, payments,
+        and OS services.</p>
 
-    <h2>Retention &amp; Deletion</h2>
-    <p>Local data remains until you clear it in the App, clear app storage, or uninstall.
-      Uninstalling removes the App's local database on that device. Store purchase records stay
-      with Google/Apple; use "Restore purchases" after reinstall if your entitlement still applies.</p>
+      <h2>Retention &amp; Deletion</h2>
+      <p>Local data remains until you clear it in the App, clear app storage, or uninstall.
+        Uninstalling removes the App's local database on that device. Store purchase records stay
+        with Google/Apple; use “Restore purchases” after reinstall if your entitlement still applies.</p>
 
-    <h2>Children</h2>
-    <p>The App is not directed at children under 13 (or the applicable minimum age). We do not
-      knowingly collect personal information from children through an account system, because
-      none exists.</p>
+      <h2>Children</h2>
+      <p>The App is not directed at children under 13 (or the applicable minimum age). We do not
+        knowingly collect personal information from children through an account system, because
+        none exists.</p>
 
-    <h2>Changes</h2>
-    <p>This policy may be updated occasionally; the date above will change accordingly.
-      Continued use after an update means you accept the revised policy.</p>
+      <h2>Changes</h2>
+      <p>This policy may be updated occasionally; the effective date above will change accordingly.
+        Continued use after an update means you accept the revised policy.</p>
 
-    <h2>Contact</h2>
-    <p>
-      Email: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a>
-    </p>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="zh" lang="zh-Hans" hidden>
+      <h1>隐私政策</h1>
+      <p class="meta">本地音乐播放器 · 生效日期：2026 年 8 月 3 日</p>
+
+      <p class="note">如中英文内容存在差异，以英文版为准。</p>
+
+      <p>
+        本地音乐播放器（以下简称“本应用”）是一款<strong>离线本地音乐播放器</strong>。
+        本应用不提供应用内账号系统，我们也不运营用于收集您音乐库或个人资料的服务器。
+      </p>
+
+      <h2>概要</h2>
+      <ul>
+        <li>无需注册或登录。</li>
+        <li>您的音乐、歌单与设置保存在您的设备本地。</li>
+        <li>我们不出售您的个人数据。</li>
+        <li>如有付费项目，由 Google Play / App Store 处理支付，非我方处理。</li>
+      </ul>
+
+      <h2>本地保存的内容</h2>
+      <p>根据您的使用情况，本应用可能在本地保存：扫描到的音乐元数据（标题、歌手、专辑、文件路径）、
+        歌单、收藏、播放队列与进度、主题与偏好设置，以及您选择的自定义封面图片。
+        以上内容不会上传到我方运营的服务器。</p>
+
+      <h2>权限用途</h2>
+      <p>以下权限仅用于对应功能，具体是否请求取决于系统版本：</p>
+      <ul>
+        <li><strong>媒体 / 存储</strong> — 查找并播放您选择的音频文件。</li>
+        <li><strong>相册</strong> — 仅在您选择自定义封面图片时使用。</li>
+        <li><strong>通知 / 后台播放</strong> — 展示媒体控制并保持后台播放。</li>
+        <li><strong>音频设置</strong> — 用于支持播放音效。</li>
+        <li><strong>悬浮窗</strong>（Android，可选）— 仅用于桌面歌词功能。</li>
+        <li><strong>蓝牙音频路由</strong> — 用于识别车载/蓝牙音频设备，与通讯录无关。</li>
+      </ul>
+      <p>您可以在系统设置中拒绝或撤回任意权限，对应功能会因此受限。</p>
+
+      <h2>付费购买</h2>
+      <p>订阅或一次性解锁均通过 Google Play / App Store 结算，遵循其各自的隐私政策。
+        我方仅获取解锁功能所需的购买状态，不会获取您的完整支付信息。</p>
+
+      <h2>信息共享</h2>
+      <p>我们不出售您的个人信息，也不会将您本地的音乐库提供给第三方用于营销。
+        仅在分发、支付、系统服务等必要场景下，数据可能触及 Google / Apple。</p>
+
+      <h2>保留与删除</h2>
+      <p>本地数据将保留至您在应用内清除、清除应用存储或卸载应用为止。
+        卸载会移除该设备上本应用的本地数据库。商店购买记录保留在 Google / Apple 一侧；
+        重装后如权益仍有效，可使用“恢复购买”找回。</p>
+
+      <h2>未成年人</h2>
+      <p>本应用不面向 13 岁以下（或所在地区规定的最低年龄）儿童。
+        由于本应用没有账号系统，我们不会通过账号系统收集儿童个人信息。</p>
+
+      <h2>政策更新</h2>
+      <p>本政策可能会不定期更新，更新后上方生效日期会相应变更。更新后继续使用本应用即视为您接受修订后的政策。</p>
+
+      <h2>联系方式</h2>
+      <p>邮箱：<a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="zh-TW" lang="zh-Hant" hidden>
+      <h1>隱私權政策</h1>
+      <p class="meta">本機音樂播放器 · 生效日期：2026 年 8 月 3 日</p>
+
+      <p class="note">如中英文內容有所差異，以英文版為準。</p>
+
+      <p>
+        本機音樂播放器（以下簡稱「本應用程式」）是一款<strong>離線本機音樂播放器</strong>。
+        本應用程式不提供應用程式內帳號系統，我們也不營運用於收集您音樂庫或個人資料的伺服器。
+      </p>
+
+      <h2>概要</h2>
+      <ul>
+        <li>無需註冊或登入。</li>
+        <li>您的音樂、播放清單與設定皆保存在您的裝置本機。</li>
+        <li>我們不出售您的個人資料。</li>
+        <li>如有付費項目，由 Google Play / App Store 處理付款，非我方處理。</li>
+      </ul>
+
+      <h2>本機保存的內容</h2>
+      <p>依您的使用情況，本應用程式可能在本機保存：掃描到的音樂中繼資料（標題、歌手、專輯、檔案路徑）、
+        播放清單、收藏、播放佇列與進度、主題與偏好設定，以及您選擇的自訂封面圖片。
+        以上內容不會上傳至我方營運的伺服器。</p>
+
+      <h2>權限用途</h2>
+      <p>以下權限僅用於對應功能，是否請求取決於系統版本：</p>
+      <ul>
+        <li><strong>媒體 / 儲存空間</strong> — 尋找並播放您選擇的音訊檔案。</li>
+        <li><strong>相簿</strong> — 僅在您選擇自訂封面圖片時使用。</li>
+        <li><strong>通知 / 背景播放</strong> — 顯示媒體控制並維持背景播放。</li>
+        <li><strong>音訊設定</strong> — 用於支援播放音效。</li>
+        <li><strong>懸浮視窗</strong>（Android，選用）— 僅用於桌面歌詞功能。</li>
+        <li><strong>藍牙音訊路由</strong> — 用於識別車機/藍牙音訊裝置，與通訊錄無關。</li>
+      </ul>
+      <p>您可以在系統設定中拒絕或撤回任何權限，對應功能將因此受限。</p>
+
+      <h2>付費購買</h2>
+      <p>訂閱或一次性解鎖皆透過 Google Play / App Store 結帳，並遵循其各自的隱私權政策。
+        我方僅取得解鎖功能所需的購買狀態，不會取得您完整的付款資訊。</p>
+
+      <h2>資訊共享</h2>
+      <p>我們不出售您的個人資訊，也不會將您本機的音樂庫提供給第三方用於行銷。
+        僅在發布、付款、系統服務等必要情況下，資料可能觸及 Google / Apple。</p>
+
+      <h2>保留與刪除</h2>
+      <p>本機資料將保留至您在應用程式內清除、清除應用程式儲存空間或卸載應用程式為止。
+        卸載會移除該裝置上本應用程式的本機資料庫。商店購買紀錄保留在 Google / Apple 一側；
+        重新安裝後如權益仍有效，可使用「恢復購買」找回。</p>
+
+      <h2>未成年人</h2>
+      <p>本應用程式不以 13 歲以下（或所在地區規定之最低年齡）兒童為對象。
+        由於本應用程式沒有帳號系統，我們不會透過帳號系統收集兒童個人資訊。</p>
+
+      <h2>政策更新</h2>
+      <p>本政策可能不定期更新，更新後上方生效日期會相應變更。更新後繼續使用本應用程式，即視為您接受修訂後的政策。</p>
+
+      <h2>聯絡方式</h2>
+      <p>電子郵件：<a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="ja" lang="ja" hidden>
+      <h1>プライバシーポリシー</h1>
+      <p class="meta">ローカル音楽プレーヤー · 施行日：2026 年 8 月 3 日</p>
+
+      <p class="note">日本語版と英語版の内容に相違がある場合は、英語版が優先されます。</p>
+
+      <p>
+        ローカル音楽プレーヤー（以下「本アプリ」）は<strong>オフラインで動作するローカル音楽プレーヤー</strong>です。
+        アプリ内のアカウント機能はなく、お客様のライブラリや個人情報を収集するサーバーも運営していません。
+      </p>
+
+      <h2>概要</h2>
+      <ul>
+        <li>アプリ内での登録・ログインは不要です。</li>
+        <li>音楽、プレイリスト、設定はお客様の端末内に保存されます。</li>
+        <li>個人データを販売することはありません。</li>
+        <li>課金がある場合、決済は Google Play / App Store が処理し、当方では処理しません。</li>
+      </ul>
+
+      <h2>端末内に保存される情報</h2>
+      <p>ご利用状況に応じて、本アプリは次の情報を端末内に保存する場合があります：スキャンした楽曲のメタデータ
+        （タイトル、アーティスト、アルバム、ファイルパス）、プレイリスト、お気に入り、再生キューと再生位置、
+        テーマや各種設定、お客様が選択したカバー画像。これらが当方の運営するサーバーへ送信されることはありません。</p>
+
+      <h2>権限の用途</h2>
+      <p>以下の権限は記載の目的にのみ使用します。要求されるかどうかは OS のバージョンによって異なります。</p>
+      <ul>
+        <li><strong>メディア / ストレージ</strong> — お客様が選択した音声ファイルの検索と再生。</li>
+        <li><strong>写真</strong> — カバー画像を選択する場合にのみ使用します。</li>
+        <li><strong>通知 / バックグラウンド再生</strong> — メディア操作の表示と再生の継続。</li>
+        <li><strong>オーディオ設定</strong> — 対応環境での再生エフェクト。</li>
+        <li><strong>他のアプリの上に重ねて表示</strong>（Android、任意）— デスクトップ歌詞のみに使用します。</li>
+        <li><strong>Bluetooth オーディオ経路</strong> — 車載/Bluetooth 機器の識別に使用し、連絡先とは無関係です。</li>
+      </ul>
+      <p>いずれの権限も端末の設定で拒否・取り消しできます。その場合、該当機能は制限されます。</p>
+
+      <h2>課金について</h2>
+      <p>サブスクリプションおよび買い切りによる解除は Google Play / App Store を通じて決済され、
+        各社のプライバシーポリシーが適用されます。当方が受け取るのは機能を解除するために必要な購入状態のみで、
+        お客様の支払い情報そのものを受け取ることはありません。</p>
+
+      <h2>情報の共有</h2>
+      <p>お客様の個人情報を販売することはなく、端末内のライブラリをマーケティング目的で第三者に提供することもありません。
+        配信、決済、OS の機能提供に必要な範囲で、データが Google / Apple に渡る場合があります。</p>
+
+      <h2>保存期間と削除</h2>
+      <p>端末内のデータは、アプリ内での消去、アプリのストレージの消去、またはアンインストールを行うまで保持されます。
+        アンインストールすると、その端末上の本アプリのデータベースは削除されます。
+        ストアの購入履歴は Google / Apple 側に保持されます。再インストール後も権利が有効な場合は「購入の復元」をご利用ください。</p>
+
+      <h2>お子様について</h2>
+      <p>本アプリは 13 歳未満（または各地域で定められた最低年齢未満）のお子様を対象としていません。
+        アカウント機能が存在しないため、アカウントを通じてお子様の個人情報を収集することはありません。</p>
+
+      <h2>本ポリシーの変更</h2>
+      <p>本ポリシーは随時更新される場合があり、その際は上記の施行日を変更します。
+        更新後も本アプリの利用を継続された場合、改訂後のポリシーに同意したものとみなします。</p>
+
+      <h2>お問い合わせ</h2>
+      <p>メール：<a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="ko" lang="ko" hidden>
+      <h1>개인정보 처리방침</h1>
+      <p class="meta">로컬 음악 플레이어 · 시행일: 2026년 8월 3일</p>
+
+      <p class="note">한국어판과 영문판의 내용이 다를 경우 영문판이 우선합니다.</p>
+
+      <p>
+        로컬 음악 플레이어(이하 “본 앱”)는 <strong>오프라인으로 동작하는 로컬 음악 플레이어</strong>입니다.
+        앱 내 계정 시스템이 없으며, 사용자의 라이브러리나 개인 정보를 수집하는 서버도 운영하지 않습니다.
+      </p>
+
+      <h2>요약</h2>
+      <ul>
+        <li>앱 내 가입이나 로그인이 필요하지 않습니다.</li>
+        <li>음악, 재생목록, 설정은 사용자의 기기에 저장됩니다.</li>
+        <li>개인 데이터를 판매하지 않습니다.</li>
+        <li>결제가 있는 경우 Google Play / App Store가 처리하며, 당사가 처리하지 않습니다.</li>
+      </ul>
+
+      <h2>기기에 저장되는 정보</h2>
+      <p>이용 방식에 따라 본 앱은 다음 정보를 기기에 저장할 수 있습니다: 스캔한 음악의 메타데이터
+        (제목, 아티스트, 앨범, 파일 경로), 재생목록, 즐겨찾기, 재생 대기열과 재생 위치,
+        테마 및 환경설정, 사용자가 선택한 커버 이미지. 이러한 정보는 당사가 운영하는 서버로 전송되지 않습니다.</p>
+
+      <h2>권한 용도</h2>
+      <p>아래 권한은 명시된 목적으로만 사용되며, 요청 여부는 OS 버전에 따라 다릅니다.</p>
+      <ul>
+        <li><strong>미디어 / 저장공간</strong> — 사용자가 선택한 오디오 파일 검색 및 재생.</li>
+        <li><strong>사진</strong> — 커버 이미지를 선택할 때만 사용합니다.</li>
+        <li><strong>알림 / 백그라운드 재생</strong> — 미디어 컨트롤 표시 및 재생 유지.</li>
+        <li><strong>오디오 설정</strong> — 지원되는 환경에서의 재생 효과.</li>
+        <li><strong>다른 앱 위에 표시</strong>(Android, 선택) — 데스크톱 가사 기능에만 사용합니다.</li>
+        <li><strong>블루투스 오디오 라우팅</strong> — 차량/블루투스 기기 인식에 사용하며 연락처와 무관합니다.</li>
+      </ul>
+      <p>모든 권한은 시스템 설정에서 거부하거나 철회할 수 있으며, 이 경우 관련 기능이 제한됩니다.</p>
+
+      <h2>결제</h2>
+      <p>구독 또는 일회성 해제는 Google Play / App Store를 통해 결제되며 각사의 개인정보 처리방침이 적용됩니다.
+        당사는 기능 해제에 필요한 구매 상태만 전달받으며, 전체 결제 정보는 받지 않습니다.</p>
+
+      <h2>정보 공유</h2>
+      <p>당사는 개인정보를 판매하지 않으며, 기기 내 라이브러리를 마케팅 목적으로 제3자에게 제공하지 않습니다.
+        배포, 결제, OS 서비스에 필요한 범위에서 일부 데이터가 Google / Apple에 전달될 수 있습니다.</p>
+
+      <h2>보관 및 삭제</h2>
+      <p>기기 내 데이터는 앱에서 삭제하거나 앱 저장공간을 지우거나 앱을 삭제할 때까지 보관됩니다.
+        앱을 삭제하면 해당 기기의 본 앱 데이터베이스가 제거됩니다. 스토어 구매 기록은 Google / Apple에 남으며,
+        재설치 후에도 권한이 유효하면 “구매 복원”을 이용하십시오.</p>
+
+      <h2>아동에 관한 사항</h2>
+      <p>본 앱은 13세 미만(또는 해당 지역에서 정한 최소 연령 미만) 아동을 대상으로 하지 않습니다.
+        계정 시스템이 존재하지 않으므로 계정을 통해 아동의 개인정보를 수집하지 않습니다.</p>
+
+      <h2>방침 변경</h2>
+      <p>본 방침은 수시로 업데이트될 수 있으며, 그에 따라 위의 시행일이 변경됩니다.
+        업데이트 후에도 본 앱을 계속 사용하시면 개정된 방침에 동의한 것으로 봅니다.</p>
+
+      <h2>문의</h2>
+      <p>이메일: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="de" lang="de" hidden>
+      <h1>Datenschutzerklärung</h1>
+      <p class="meta">Lokaler Musikplayer · Gültig ab 3. August 2026</p>
+
+      <p class="note">Bei Abweichungen zwischen der deutschen und der englischen Fassung ist die englische Fassung maßgeblich.</p>
+
+      <p>
+        Lokaler Musikplayer („die App“) ist ein <strong>offline arbeitender lokaler Musikplayer</strong>.
+        Es gibt kein Konto in der App, und wir betreiben keinen Server, der Ihre Mediathek oder
+        Ihr persönliches Profil erfasst.
+      </p>
+
+      <h2>Zusammenfassung</h2>
+      <ul>
+        <li>Keine Registrierung oder Anmeldung in der App.</li>
+        <li>Ihre Musik, Playlists und Einstellungen bleiben auf Ihrem Gerät.</li>
+        <li>Wir verkaufen Ihre personenbezogenen Daten nicht.</li>
+        <li>Etwaige Zahlungen werden von Google Play / Apple App Store abgewickelt, nicht von uns.</li>
+      </ul>
+
+      <h2>Was auf Ihrem Gerät bleibt</h2>
+      <p>Je nach Nutzung speichert die App lokal: Metadaten der eingelesenen Musik (Titel, Interpret,
+        Album, Dateipfad), Playlists, Favoriten, Warteschlange, Wiedergabeposition, Design und
+        Einstellungen sowie von Ihnen gewählte Cover-Bilder. Nichts davon wird an von uns
+        betriebene Server übertragen.</p>
+
+      <h2>Berechtigungen</h2>
+      <p>Werden ausschließlich für den genannten Zweck angefragt; die Verfügbarkeit hängt von der Systemversion ab:</p>
+      <ul>
+        <li><strong>Medien / Speicher</strong> — Auffinden und Abspielen der von Ihnen gewählten Audiodateien.</li>
+        <li><strong>Fotos</strong> — nur wenn Sie ein eigenes Cover-Bild auswählen.</li>
+        <li><strong>Benachrichtigungen / Hintergrundwiedergabe</strong> — Mediensteuerung und fortlaufende Wiedergabe.</li>
+        <li><strong>Audioeinstellungen</strong> — Klangeffekte, soweit unterstützt.</li>
+        <li><strong>Über anderen Apps einblenden</strong> (Android, optional) — ausschließlich für schwebende Liedtexte.</li>
+        <li><strong>Bluetooth-Audioweiterleitung</strong> — Erkennung von Auto-/Bluetooth-Geräten, nicht von Kontakten.</li>
+      </ul>
+      <p>Sie können jede Berechtigung in den Systemeinstellungen ablehnen oder widerrufen; die betreffenden Funktionen sind dann eingeschränkt.</p>
+
+      <h2>Käufe</h2>
+      <p>Abonnements und einmalige Freischaltungen werden über Google Play / Apple App Store
+        abgerechnet und unterliegen deren Datenschutzerklärungen. Wir erhalten lediglich den
+        Berechtigungsstatus, der zum Freischalten der Funktionen nötig ist — nie Ihre vollständigen Zahlungsdaten.</p>
+
+      <h2>Weitergabe</h2>
+      <p>Wir verkaufen Ihre personenbezogenen Daten nicht und geben Ihre lokale Mediathek nicht zu
+        Marketingzwecken an Dritte weiter. In dem für Vertrieb, Zahlungen und Systemdienste
+        erforderlichen Umfang können Daten an Google/Apple gelangen.</p>
+
+      <h2>Speicherdauer &amp; Löschung</h2>
+      <p>Lokale Daten bleiben erhalten, bis Sie sie in der App löschen, den App-Speicher leeren oder
+        die App deinstallieren. Beim Deinstallieren wird die lokale Datenbank der App auf diesem Gerät
+        entfernt. Kaufbelege bleiben bei Google/Apple; nutzen Sie nach einer Neuinstallation
+        „Käufe wiederherstellen“, sofern Ihre Berechtigung noch gilt.</p>
+
+      <h2>Kinder</h2>
+      <p>Die App richtet sich nicht an Kinder unter 13 Jahren (bzw. unter dem jeweils geltenden
+        Mindestalter). Da es kein Kontosystem gibt, erheben wir über ein solches auch keine
+        personenbezogenen Daten von Kindern.</p>
+
+      <h2>Änderungen</h2>
+      <p>Diese Erklärung kann gelegentlich aktualisiert werden; das oben genannte Datum ändert sich
+        entsprechend. Die weitere Nutzung nach einer Aktualisierung gilt als Zustimmung zur
+        überarbeiteten Fassung.</p>
+
+      <h2>Kontakt</h2>
+      <p>E-Mail: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="es" lang="es" hidden>
+      <h1>Política de privacidad</h1>
+      <p class="meta">Reproductor de música local · En vigor desde el 3 de agosto de 2026</p>
+
+      <p class="note">Si existe alguna discrepancia entre la versión en español y la versión en inglés, prevalecerá la versión en inglés.</p>
+
+      <p>
+        Reproductor de música local («la App») es un <strong>reproductor de música local que funciona sin conexión</strong>.
+        No hay sistema de cuentas dentro de la App y no operamos ningún servidor que recopile tu
+        biblioteca de música ni tu perfil personal.
+      </p>
+
+      <h2>Resumen</h2>
+      <ul>
+        <li>No hace falta registrarse ni iniciar sesión en la App.</li>
+        <li>Tu música, tus listas de reproducción y tus ajustes permanecen en tu dispositivo.</li>
+        <li>No vendemos tus datos personales.</li>
+        <li>Los pagos, si los hubiera, los procesa Google Play / Apple App Store, no nosotros.</li>
+      </ul>
+
+      <h2>Qué se guarda en tu dispositivo</h2>
+      <p>Según cómo uses la App, esta puede guardar localmente: metadatos de la música analizada
+        (título, artista, álbum, ruta del archivo), listas de reproducción, favoritas, cola de
+        reproducción y posición, tema y preferencias, y las carátulas personalizadas que elijas.
+        Nada de esto se sube a servidores gestionados por nosotros.</p>
+
+      <h2>Permisos</h2>
+      <p>Se solicitan únicamente para el fin indicado; su disponibilidad varía según la versión del sistema:</p>
+      <ul>
+        <li><strong>Multimedia / almacenamiento</strong> — localizar y reproducir los archivos de audio que elijas.</li>
+        <li><strong>Fotos</strong> — solo cuando eliges una carátula personalizada.</li>
+        <li><strong>Notificaciones / reproducción en segundo plano</strong> — controles multimedia y continuidad de la reproducción.</li>
+        <li><strong>Ajustes de audio</strong> — efectos de reproducción donde estén disponibles.</li>
+        <li><strong>Mostrar sobre otras aplicaciones</strong> (Android, opcional) — únicamente para la letra flotante.</li>
+        <li><strong>Enrutamiento de audio Bluetooth</strong> — detección de dispositivos de coche/Bluetooth, no de contactos.</li>
+      </ul>
+      <p>Puedes denegar o revocar cualquier permiso en los ajustes del sistema; las funciones correspondientes quedarán limitadas.</p>
+
+      <h2>Compras</h2>
+      <p>Las suscripciones y los desbloqueos de pago único se facturan a través de Google Play /
+        Apple App Store, conforme a sus propias políticas de privacidad. Solo recibimos el estado
+        de la compra necesario para desbloquear funciones, nunca los datos completos de tu pago.</p>
+
+      <h2>Divulgación</h2>
+      <p>No vendemos tu información personal ni compartimos tu biblioteca local con terceros con
+        fines de marketing. Algunos datos pueden llegar a Google/Apple en la medida necesaria para
+        la distribución, los pagos y los servicios del sistema.</p>
+
+      <h2>Conservación y eliminación</h2>
+      <p>Los datos locales se conservan hasta que los borres en la App, borres el almacenamiento de
+        la App o la desinstales. Al desinstalarla se elimina su base de datos local en ese dispositivo.
+        Los registros de compra quedan en Google/Apple; usa «Restaurar compras» después de reinstalar
+        si tu acceso sigue vigente.</p>
+
+      <h2>Menores</h2>
+      <p>La App no está dirigida a menores de 13 años (o de la edad mínima aplicable). Como no existe
+        ningún sistema de cuentas, no recopilamos a través de él información personal de menores.</p>
+
+      <h2>Cambios</h2>
+      <p>Esta política puede actualizarse ocasionalmente; la fecha de entrada en vigor indicada arriba
+        cambiará en consecuencia. Seguir usando la App tras una actualización implica que aceptas la
+        política revisada.</p>
+
+      <h2>Contacto</h2>
+      <p>Correo electrónico: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="fr" lang="fr" hidden>
+      <h1>Politique de confidentialité</h1>
+      <p class="meta">Lecteur de musique locale · En vigueur depuis le 3 août 2026</p>
+
+      <p class="note">En cas de divergence entre la version française et la version anglaise, la version anglaise prévaut.</p>
+
+      <p>
+        Lecteur de musique locale (« l'Application ») est un <strong>lecteur de musique locale fonctionnant hors ligne</strong>.
+        L'Application ne comporte aucun système de compte et nous n'exploitons aucun serveur
+        collectant votre bibliothèque musicale ou votre profil personnel.
+      </p>
+
+      <h2>Résumé</h2>
+      <ul>
+        <li>Aucune inscription ni connexion dans l'Application.</li>
+        <li>Votre musique, vos playlists et vos réglages restent sur votre appareil.</li>
+        <li>Nous ne vendons pas vos données personnelles.</li>
+        <li>Les paiements, le cas échéant, sont traités par Google Play / Apple App Store, et non par nous.</li>
+      </ul>
+
+      <h2>Ce qui reste sur votre appareil</h2>
+      <p>Selon votre usage, l'Application peut enregistrer localement : les métadonnées de la musique
+        analysée (titre, artiste, album, chemin du fichier), les playlists, les favoris, la file
+        d'attente et la position de lecture, le thème et les préférences, ainsi que les pochettes
+        personnalisées que vous choisissez. Rien de tout cela n'est transmis à des serveurs que nous exploitons.</p>
+
+      <h2>Autorisations</h2>
+      <p>Demandées uniquement pour l'usage indiqué ; leur disponibilité varie selon la version du système :</p>
+      <ul>
+        <li><strong>Médias / stockage</strong> — trouver et lire les fichiers audio que vous choisissez.</li>
+        <li><strong>Photos</strong> — uniquement lorsque vous choisissez une pochette personnalisée.</li>
+        <li><strong>Notifications / lecture en arrière-plan</strong> — commandes multimédias et continuité de la lecture.</li>
+        <li><strong>Réglages audio</strong> — effets de lecture lorsqu'ils sont pris en charge.</li>
+        <li><strong>Affichage par-dessus les autres applications</strong> (Android, facultatif) — uniquement pour les paroles flottantes.</li>
+        <li><strong>Routage audio Bluetooth</strong> — détection des appareils voiture/Bluetooth, sans rapport avec les contacts.</li>
+      </ul>
+      <p>Vous pouvez refuser ou révoquer toute autorisation dans les réglages du système ; les fonctions concernées seront alors limitées.</p>
+
+      <h2>Achats</h2>
+      <p>Les abonnements et les déverrouillages à paiement unique sont facturés via Google Play /
+        Apple App Store, selon leurs propres politiques de confidentialité. Nous ne recevons que
+        l'état de l'achat nécessaire au déverrouillage des fonctions, jamais l'intégralité de vos
+        informations de paiement.</p>
+
+      <h2>Partage</h2>
+      <p>Nous ne vendons pas vos informations personnelles et ne partageons pas votre bibliothèque
+        locale avec des tiers à des fins de marketing. Certaines données peuvent parvenir à
+        Google/Apple dans la mesure nécessaire à la distribution, aux paiements et aux services du système.</p>
+
+      <h2>Conservation et suppression</h2>
+      <p>Les données locales sont conservées jusqu'à ce que vous les effaciez dans l'Application, que
+        vous videz son stockage ou que vous la désinstalliez. La désinstallation supprime la base de
+        données locale de l'Application sur cet appareil. Les justificatifs d'achat restent chez
+        Google/Apple ; utilisez « Restaurer les achats » après une réinstallation si vos droits sont toujours valides.</p>
+
+      <h2>Enfants</h2>
+      <p>L'Application ne s'adresse pas aux enfants de moins de 13 ans (ou de l'âge minimum applicable).
+        Aucun système de compte n'existant, nous ne collectons pas par ce biais d'informations
+        personnelles concernant des enfants.</p>
+
+      <h2>Modifications</h2>
+      <p>Cette politique peut être mise à jour ponctuellement ; la date d'entrée en vigueur indiquée
+        ci-dessus sera modifiée en conséquence. Continuer à utiliser l'Application après une mise à
+        jour vaut acceptation de la version révisée.</p>
+
+      <h2>Contact</h2>
+      <p>E-mail : <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="pt" lang="pt" hidden>
+      <h1>Política de Privacidade</h1>
+      <p class="meta">Reprodutor de música local · Em vigor desde 3 de agosto de 2026</p>
+
+      <p class="note">Em caso de divergência entre a versão em português e a versão em inglês, prevalece a versão em inglês.</p>
+
+      <p>
+        Reprodutor de música local (“o App”) é um <strong>reprodutor de música local que funciona offline</strong>.
+        Não há sistema de contas no App e não operamos nenhum servidor que colete sua biblioteca de
+        música ou seu perfil pessoal.
+      </p>
+
+      <h2>Resumo</h2>
+      <ul>
+        <li>Não é necessário cadastro nem login no App.</li>
+        <li>Suas músicas, playlists e configurações permanecem no seu dispositivo.</li>
+        <li>Não vendemos seus dados pessoais.</li>
+        <li>Os pagamentos, se houver, são processados pelo Google Play / Apple App Store, não por nós.</li>
+      </ul>
+
+      <h2>O que fica no seu dispositivo</h2>
+      <p>Dependendo de como você usa o App, ele pode armazenar localmente: metadados das músicas
+        lidas (título, artista, álbum, caminho do arquivo), playlists, favoritas, fila de reprodução
+        e posição, tema e preferências, e as capas personalizadas que você escolher. Nada disso é
+        enviado a servidores operados por nós.</p>
+
+      <h2>Permissões</h2>
+      <p>Solicitadas apenas para a finalidade indicada; a disponibilidade varia conforme a versão do sistema:</p>
+      <ul>
+        <li><strong>Mídia / armazenamento</strong> — localizar e reproduzir os arquivos de áudio que você escolher.</li>
+        <li><strong>Fotos</strong> — apenas quando você escolhe uma capa personalizada.</li>
+        <li><strong>Notificações / reprodução em segundo plano</strong> — controles de mídia e continuidade da reprodução.</li>
+        <li><strong>Configurações de áudio</strong> — efeitos de reprodução onde houver suporte.</li>
+        <li><strong>Sobreposição a outros apps</strong> (Android, opcional) — somente para a letra flutuante.</li>
+        <li><strong>Roteamento de áudio Bluetooth</strong> — detecção de dispositivos de carro/Bluetooth, sem relação com contatos.</li>
+      </ul>
+      <p>Você pode recusar ou revogar qualquer permissão nas configurações do sistema; os recursos correspondentes ficarão limitados.</p>
+
+      <h2>Compras</h2>
+      <p>Assinaturas e desbloqueios de pagamento único são cobrados pelo Google Play / Apple App Store,
+        sujeitos às políticas de privacidade dessas plataformas. Recebemos apenas o status de compra
+        necessário para desbloquear recursos, nunca os dados completos do seu pagamento.</p>
+
+      <h2>Compartilhamento</h2>
+      <p>Não vendemos suas informações pessoais nem compartilhamos sua biblioteca local com terceiros
+        para fins de marketing. Alguns dados podem chegar ao Google/Apple na medida necessária para
+        distribuição, pagamentos e serviços do sistema.</p>
+
+      <h2>Retenção e exclusão</h2>
+      <p>Os dados locais permanecem até que você os apague no App, limpe o armazenamento do App ou
+        desinstale-o. A desinstalação remove o banco de dados local do App naquele dispositivo.
+        Os registros de compra ficam com o Google/Apple; use “Restaurar compras” após reinstalar,
+        se o seu acesso continuar válido.</p>
+
+      <h2>Crianças</h2>
+      <p>O App não se destina a crianças menores de 13 anos (ou da idade mínima aplicável). Como não
+        existe sistema de contas, não coletamos por esse meio informações pessoais de crianças.</p>
+
+      <h2>Alterações</h2>
+      <p>Esta política pode ser atualizada periodicamente; a data de vigência indicada acima será
+        alterada conforme necessário. Continuar a usar o App após uma atualização significa que você
+        aceita a política revisada.</p>
+
+      <h2>Contato</h2>
+      <p>E-mail: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
+
+    <section data-lang="ar" lang="ar" dir="rtl" hidden>
+      <h1>سياسة الخصوصية</h1>
+      <p class="meta">مشغل الموسيقى المحلية · ساري من 3 أغسطس 2026</p>
+
+      <p class="note">في حال وجود اختلاف بين النسخة العربية والنسخة الإنجليزية، تكون النسخة الإنجليزية هي المرجع.</p>
+
+      <p>
+        مشغل الموسيقى المحلية (»التطبيق«) هو <strong>مشغل موسيقى محلي يعمل دون اتصال بالإنترنت</strong>.
+        لا يوجد نظام حسابات داخل التطبيق، ولا نُشغّل أي خادم يجمع مكتبتك الموسيقية أو ملفك الشخصي.
+      </p>
+
+      <h2>ملخص</h2>
+      <ul>
+        <li>لا حاجة إلى التسجيل أو تسجيل الدخول داخل التطبيق.</li>
+        <li>تبقى موسيقاك وقوائم التشغيل والإعدادات على جهازك.</li>
+        <li>لا نبيع بياناتك الشخصية.</li>
+        <li>تُعالَج المدفوعات، إن وُجدت، من قِبل Google Play / Apple App Store وليس من قِبلنا.</li>
+      </ul>
+
+      <h2>ما يبقى على جهازك</h2>
+      <p>حسب طريقة استخدامك، قد يحفظ التطبيق محليًا: البيانات الوصفية للموسيقى التي تم فحصها
+        (العنوان، الفنان، الألبوم، مسار الملف)، وقوائم التشغيل، والمفضلة، وقائمة الانتظار وموضع التشغيل،
+        والسمة والتفضيلات، وأغلفة مخصصة تختارها. لا يُرسَل أي من ذلك إلى خوادم نُشغّلها.</p>
+
+      <h2>الأذونات</h2>
+      <p>تُطلب للغرض المذكور فقط، ويختلف توفرها حسب إصدار نظام التشغيل:</p>
+      <ul>
+        <li><strong>الوسائط / التخزين</strong> — العثور على ملفات الصوت التي تختارها وتشغيلها.</li>
+        <li><strong>الصور</strong> — فقط عند اختيارك صورة غلاف مخصصة.</li>
+        <li><strong>الإشعارات / التشغيل في الخلفية</strong> — عناصر التحكم في الوسائط واستمرار التشغيل.</li>
+        <li><strong>إعدادات الصوت</strong> — مؤثرات التشغيل حيث تكون مدعومة.</li>
+        <li><strong>العرض فوق التطبيقات الأخرى</strong> (أندرويد، اختياري) — لكلمات الأغاني العائمة فقط.</li>
+        <li><strong>توجيه صوت البلوتوث</strong> — للتعرف على أجهزة السيارة/البلوتوث، ولا علاقة له بجهات الاتصال.</li>
+      </ul>
+      <p>يمكنك رفض أي إذن أو سحبه من إعدادات النظام، وستكون الميزات المرتبطة به محدودة.</p>
+
+      <h2>المدفوعات</h2>
+      <p>تُحصَّل الاشتراكات وعمليات الفتح لمرة واحدة عبر Google Play / Apple App Store وفقًا لسياسات
+        الخصوصية الخاصة بهما. نتلقى فقط حالة الاستحقاق اللازمة لفتح الميزات، ولا نتلقى مطلقًا
+        تفاصيل الدفع الكاملة.</p>
+
+      <h2>مشاركة البيانات</h2>
+      <p>لا نبيع معلوماتك الشخصية ولا نشارك مكتبتك المحلية مع أطراف ثالثة لأغراض التسويق.
+        وقد تصل بيانات محدودة إلى Google/Apple بالقدر اللازم للتوزيع والمدفوعات وخدمات نظام التشغيل.</p>
+
+      <h2>الاحتفاظ والحذف</h2>
+      <p>تبقى البيانات المحلية إلى أن تحذفها من داخل التطبيق، أو تمحو مساحة تخزين التطبيق، أو تحذف التطبيق.
+        يؤدي حذف التطبيق إلى إزالة قاعدة بياناته المحلية على ذلك الجهاز. وتبقى سجلات الشراء لدى
+        Google/Apple؛ استخدم »استعادة عمليات الشراء« بعد إعادة التثبيت إذا كان استحقاقك ما زال ساريًا.</p>
+
+      <h2>الأطفال</h2>
+      <p>التطبيق غير موجَّه إلى الأطفال دون 13 عامًا (أو دون الحد الأدنى للسن المعمول به).
+        وبما أنه لا يوجد نظام حسابات، فإننا لا نجمع من خلاله معلومات شخصية عن الأطفال.</p>
+
+      <h2>التغييرات</h2>
+      <p>قد تُحدَّث هذه السياسة من حين إلى آخر، وسيتغير تاريخ السريان المذكور أعلاه تبعًا لذلك.
+        ويُعدّ استمرارك في استخدام التطبيق بعد التحديث موافقةً على السياسة المعدَّلة.</p>
+
+      <h2>التواصل</h2>
+      <p>البريد الإلكتروني: <a href="mailto:yiifaanraan@gmail.com">yiifaanraan@gmail.com</a></p>
+    </section>
   </main>
+
+  <script>
+    (function () {
+      var sections = document.querySelectorAll('section[data-lang]');
+      var select = document.getElementById('lang-select');
+      var byCode = {};
+      for (var i = 0; i < sections.length; i++) {
+        byCode[sections[i].getAttribute('data-lang')] = sections[i];
+      }
+
+      function apply(code) {
+        if (!byCode[code]) return false;
+        for (var key in byCode) {
+          byCode[key].hidden = key !== code;
+        }
+        var root = document.documentElement;
+        root.setAttribute('lang', byCode[code].getAttribute('lang'));
+        root.setAttribute('dir', code === 'ar' ? 'rtl' : 'ltr');
+        select.value = code;
+        return true;
+      }
+
+      function resolve(tag) {
+        if (!tag) return null;
+        var lower = String(tag).replace(/_/g, '-').toLowerCase();
+        if (lower.indexOf('zh') === 0) {
+          return /hant|-tw|-hk|-mo/.test(lower) ? 'zh-TW' : 'zh';
+        }
+        var base = lower.split('-')[0];
+        return byCode[base] ? base : null;
+      }
+
+      var matched = /[?&]lang=([^&#]+)/.exec(location.search);
+      var candidates = [];
+      if (matched) candidates.push(decodeURIComponent(matched[1]));
+      var navLangs = navigator.languages || [navigator.language || navigator.userLanguage];
+      for (var j = 0; j < navLangs.length; j++) candidates.push(navLangs[j]);
+
+      for (var k = 0; k < candidates.length; k++) {
+        var code = resolve(candidates[k]);
+        if (code && apply(code)) break;
+      }
+
+      select.addEventListener('change', function () {
+        apply(select.value);
+        if (window.history && history.replaceState) {
+          history.replaceState(null, '', location.pathname + '?lang=' + select.value);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
