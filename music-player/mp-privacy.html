@@ -24,11 +24,11 @@
     h2 { font-size: 1.05rem; margin: 1.75rem 0 0.6rem; padding-top: 0.5rem; border-top: 1px solid var(--border); }
     p, li { color: var(--fg); }
     .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
-    .note { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 0.9rem; font-size: 0.88rem; color: var(--muted); }
     a { color: var(--accent); }
     ul { padding-left: 1.15rem; margin: 0.4rem 0; }
     li { margin: 0.25rem 0; }
     .langbar { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--muted); }
+    .langbar label { display: inline-flex; }
     .langbar select { font: inherit; color: var(--fg); background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 0.3rem 0.5rem; }
     [dir="rtl"] ul { padding-left: 0; padding-right: 1.15rem; }
   </style>
@@ -36,7 +36,13 @@
 <body>
   <main>
     <div class="langbar">
-      <label for="lang-select">Language / 语言</label>
+      <label for="lang-select" aria-label="Language">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+      </label>
       <select id="lang-select">
         <option value="en">English</option>
         <option value="zh">简体中文</option>
@@ -55,7 +61,7 @@
 
     <section data-lang="en" lang="en">
       <h1>Privacy Policy</h1>
-      <p class="meta">Local Music Player · Effective August 26, 2026</p>
+      <p class="meta">Local Music Player · Effective September 14, 2026</p>
 
       <p>
         Local Music Player (“the App”) is an <strong>offline, local music player</strong>.
@@ -119,10 +125,7 @@
 
     <section data-lang="zh" lang="zh-Hans" hidden>
       <h1>隐私政策</h1>
-      <p class="meta">本地音乐播放器 · 生效日期：2026 年 8 月 26 日</p>
-
-      <p class="note">如中英文内容存在差异，以英文版为准。</p>
-
+      <p class="meta">本地音乐播放器 · 生效日期：2026 年 9 月 14 日</p>
       <p>
         本地音乐播放器（以下简称“本应用”）是一款<strong>离线本地音乐播放器</strong>。
         本应用不提供应用内账号系统，我们也不运营用于收集您音乐库或个人资料的服务器。
@@ -179,10 +182,7 @@
 
     <section data-lang="zh-TW" lang="zh-Hant" hidden>
       <h1>隱私權政策</h1>
-      <p class="meta">本機音樂播放器 · 生效日期：2026 年 8 月 26 日</p>
-
-      <p class="note">如中英文內容有所差異，以英文版為準。</p>
-
+      <p class="meta">本機音樂播放器 · 生效日期：2026 年 9 月 14 日</p>
       <p>
         本機音樂播放器（以下簡稱「本應用程式」）是一款<strong>離線本機音樂播放器</strong>。
         本應用程式不提供應用程式內帳號系統，我們也不營運用於收集您音樂庫或個人資料的伺服器。
@@ -239,10 +239,7 @@
 
     <section data-lang="ja" lang="ja" hidden>
       <h1>プライバシーポリシー</h1>
-      <p class="meta">ローカル音楽プレーヤー · 施行日：2026 年 8 月 26 日</p>
-
-      <p class="note">日本語版と英語版の内容に相違がある場合は、英語版が優先されます。</p>
-
+      <p class="meta">ローカル音楽プレーヤー · 施行日：2026 年 9 月 14 日</p>
       <p>
         ローカル音楽プレーヤー（以下「本アプリ」）は<strong>オフラインで動作するローカル音楽プレーヤー</strong>です。
         アプリ内のアカウント機能はなく、お客様のライブラリや個人情報を収集するサーバーも運営していません。
@@ -301,10 +298,7 @@
 
     <section data-lang="ko" lang="ko" hidden>
       <h1>개인정보 처리방침</h1>
-      <p class="meta">로컬 음악 플레이어 · 시행일: 2026년 8월 26일</p>
-
-      <p class="note">한국어판과 영문판의 내용이 다를 경우 영문판이 우선합니다.</p>
-
+      <p class="meta">로컬 음악 플레이어 · 시행일: 2026년 9월 14일</p>
       <p>
         로컬 음악 플레이어(이하 “본 앱”)는 <strong>오프라인으로 동작하는 로컬 음악 플레이어</strong>입니다.
         앱 내 계정 시스템이 없으며, 사용자의 라이브러리나 개인 정보를 수집하는 서버도 운영하지 않습니다.
@@ -362,10 +356,7 @@
 
     <section data-lang="de" lang="de" hidden>
       <h1>Datenschutzerklärung</h1>
-      <p class="meta">Lokaler Musikplayer · Gültig ab 26. August 2026</p>
-
-      <p class="note">Bei Abweichungen zwischen der deutschen und der englischen Fassung ist die englische Fassung maßgeblich.</p>
-
+      <p class="meta">Lokaler Musikplayer · Gültig ab 14. September 2026</p>
       <p>
         Lokaler Musikplayer („die App“) ist ein <strong>offline arbeitender lokaler Musikplayer</strong>.
         Es gibt kein Konto in der App, und wir betreiben keinen Server, der Ihre Mediathek oder
@@ -430,10 +421,7 @@
 
     <section data-lang="es" lang="es" hidden>
       <h1>Política de privacidad</h1>
-      <p class="meta">Reproductor de música local · En vigor desde el 26 de agosto de 2026</p>
-
-      <p class="note">Si existe alguna discrepancia entre la versión en español y la versión en inglés, prevalecerá la versión en inglés.</p>
-
+      <p class="meta">Reproductor de música local · En vigor desde el 14 de septiembre de 2026</p>
       <p>
         Reproductor de música local (“la App”) es un <strong>reproductor de música local que funciona sin conexión</strong>.
         No hay sistema de cuentas dentro de la App y no operamos ningún servidor que recopile tu
@@ -497,10 +485,7 @@
 
     <section data-lang="es-ES" lang="es-ES" hidden>
       <h1>Política de privacidad</h1>
-      <p class="meta">Reproductor de música local · En vigor desde el 26 de agosto de 2026</p>
-
-      <p class="note">Si existe alguna discrepancia entre la versión en español y la versión en inglés, prevalecerá la versión en inglés.</p>
-
+      <p class="meta">Reproductor de música local · En vigor desde el 14 de septiembre de 2026</p>
       <p>
         Reproductor de música local («la App») es un <strong>reproductor de música local que funciona sin conexión</strong>.
         No hay sistema de cuentas dentro de la App y no operamos ningún servidor que recopile tu
@@ -564,10 +549,7 @@
 
     <section data-lang="fr" lang="fr" hidden>
       <h1>Politique de confidentialité</h1>
-      <p class="meta">Lecteur de musique locale · En vigueur depuis le 26 août 2026</p>
-
-      <p class="note">En cas de divergence entre la version française et la version anglaise, la version anglaise prévaut.</p>
-
+      <p class="meta">Lecteur de musique locale · En vigueur depuis le 14 septembre 2026</p>
       <p>
         Lecteur de musique locale (« l'Application ») est un <strong>lecteur de musique locale fonctionnant hors ligne</strong>.
         L'Application ne comporte aucun système de compte et nous n'exploitons aucun serveur
@@ -633,10 +615,7 @@
 
     <section data-lang="pt" lang="pt" hidden>
       <h1>Política de Privacidade</h1>
-      <p class="meta">Reprodutor de música local · Em vigor desde 26 de agosto de 2026</p>
-
-      <p class="note">Em caso de divergência entre a versão em português e a versão em inglês, prevalece a versão em inglês.</p>
-
+      <p class="meta">Reprodutor de música local · Em vigor desde 14 de setembro de 2026</p>
       <p>
         Reprodutor de música local (“o App”) é um <strong>reprodutor de música local que funciona offline</strong>.
         Não há sistema de contas no App e não operamos nenhum servidor que colete sua biblioteca de
@@ -700,10 +679,7 @@
 
     <section data-lang="pt-PT" lang="pt-PT" hidden>
       <h1>Política de Privacidade</h1>
-      <p class="meta">Reprodutor de música local · Em vigor desde 26 de agosto de 2026</p>
-
-      <p class="note">Em caso de divergência entre a versão em português e a versão em inglês, prevalece a versão em inglês.</p>
-
+      <p class="meta">Reprodutor de música local · Em vigor desde 14 de setembro de 2026</p>
       <p>
         Reprodutor de música local (“a App”) é um <strong>reprodutor de música local que funciona offline</strong>.
         Não existe sistema de contas na App e não temos qualquer servidor que recolha a sua biblioteca
@@ -768,10 +744,7 @@
 
     <section data-lang="ar" lang="ar" dir="rtl" hidden>
       <h1>سياسة الخصوصية</h1>
-      <p class="meta">مشغل الموسيقى المحلية · ساري من 26 أغسطس 2026</p>
-
-      <p class="note">في حال وجود اختلاف بين النسخة العربية والنسخة الإنجليزية، تكون النسخة الإنجليزية هي المرجع.</p>
-
+      <p class="meta">مشغل الموسيقى المحلية · ساري من 14 سبتمبر 2026</p>
       <p>
         مشغل الموسيقى المحلية (»التطبيق«) هو <strong>مشغل موسيقى محلي يعمل دون اتصال بالإنترنت</strong>.
         لا يوجد نظام حسابات داخل التطبيق، ولا نُشغّل أي خادم يجمع مكتبتك الموسيقية أو ملفك الشخصي.
